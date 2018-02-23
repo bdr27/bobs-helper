@@ -27,5 +27,16 @@ namespace BobsHelper.BFile
             }
             File.Copy(sourceFileName, destFileName);
         }
+
+        public static void Copy(string sourceFileName, string destFileName, string backupLocation)
+        {
+            //throw new NotImplementedException();
+            if (File.Exists(destFileName))
+            {
+                destFileName = string.Format(string.Format(@"{0}\{1}\{2}{3}", Path.GetDirectoryName(destFileName), backupLocation, Path.GetFileNameWithoutExtension(destFileName), Path.GetExtension(destFileName)));
+                //Copy and delete destination filename
+            }
+            Copy(sourceFileName, destFileName);
+        }
     }
 }
