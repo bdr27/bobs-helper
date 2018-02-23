@@ -31,6 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -39,11 +41,21 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BFile\BCopy.cs" />
     <Compile Include="BForm\BNotificationBubble.cs" />
+    <Compile Include="BForm\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BForm\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLog\ABLog.cs" />
+    <Compile Include="BLog\BDebugLog.cs" />
+    <Compile Include="BLog\BLogType.cs" />
     <Compile Include="BNull.cs" />
     <Compile Include="BObject.cs" />
     <Compile Include="BForm\NotificationForm.cs">
@@ -57,6 +69,9 @@
   <ItemGroup>
     <EmbeddedResource Include="BForm\NotificationForm.resx">
       <DependentUpon>NotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BForm\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblHelloWorld = new System.Windows.Forms.Label();
+            this.lblNotification = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblHelloWorld
+            // lblNotification
             // 
-            this.lblHelloWorld.AutoSize = true;
-            this.lblHelloWorld.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHelloWorld.Location = new System.Drawing.Point(140, 98);
-            this.lblHelloWorld.Name = "lblHelloWorld";
-            this.lblHelloWorld.Size = new System.Drawing.Size(90, 20);
-            this.lblHelloWorld.TabIndex = 0;
-            this.lblHelloWorld.Text = "Hello World";
+            this.lblNotification.AutoSize = true;
+            this.lblNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotification.Location = new System.Drawing.Point(0, 0);
+            this.lblNotification.Name = "lblNotification";
+            this.lblNotification.Size = new System.Drawing.Size(90, 20);
+            this.lblNotification.TabIndex = 0;
+            this.lblNotification.Text = "Hello World";
             // 
             // NotificationForm
             // 
@@ -47,8 +47,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(386, 261);
-            this.Controls.Add(this.lblHelloWorld);
+            this.ControlBox = false;
+            this.Controls.Add(this.lblNotification);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "NotificationForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "BubbleForm";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.Load += new System.EventHandler(this.BubbleForm_Load);
@@ -59,6 +64,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblHelloWorld;
+        private System.Windows.Forms.Label lblNotification;
     }
 }
